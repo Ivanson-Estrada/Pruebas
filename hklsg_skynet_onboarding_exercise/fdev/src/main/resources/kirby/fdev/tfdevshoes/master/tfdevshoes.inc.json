@@ -1,0 +1,20 @@
+{
+    "configuration" : {
+        "params" : {
+            "artifactUrl" : "${repository.endpoint}/spark-global-libs-release-local/com/datio/kirby/kirby-ingestion/${process.version}/kirby-ingestion-${process.version}-jar-with-dependencies.jar",
+            "configUrl" : "${repository.endpoint}/${repository.repo}/kirby/mx/fdev/master/tfdevshoes/${version}/tfdevshoes.inc.conf",
+            "mainClass" : "com.datio.kirby.Launcher",
+            "repoSecurity" : "artifactory",
+            "sparkHistoryEnabled" : "true",
+            "tokenizationEnabled" : "false"
+        },
+        "size" : "M"
+    },
+    "description" : "Job tfdevshoes-master-inc created with Skynet.",
+    "jobName" : "tfdevshoes-master-inc",
+    "runtime" : {
+        "id" : "spark",
+        "processing" : "batch",
+        "version" : "2.2.1"
+    }
+}

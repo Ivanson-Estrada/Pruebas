@@ -1,0 +1,30 @@
+{
+  "namespace": "FDEV",
+  "name": "t_fdev_shoes",
+  "doc": "Table for testing T800",
+  "database": "master",
+  "type": "record",
+  "fields": [{
+    "name": "shoe_id",
+    "type": ["null", "int"],
+    "legacyName": "shoe_id",
+    "logicalFormat": "NUMERIC LARGE",
+    "deleted": false,
+    "metadata": false,
+    "default": null
+  }, {
+    "name": "shoe_model",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }, {
+    "name": "shoe_color",
+    "type": ["string", "null"],
+    "logicalFormat": "ALPHANUMERIC",
+    "deleted": false,
+    "metadata": false,
+    "default": ""
+  }]
+}
