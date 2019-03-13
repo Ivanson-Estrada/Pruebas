@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PYTHON_PREFIX=`python -c "import sys; print(sys.prefix)"`
+SPARKUTILS_JAR=`find ${PYTHON_PREFIX} -name "utils*jar"`
+spark-submit --jars ${SPARKUTILS_JAR} $@

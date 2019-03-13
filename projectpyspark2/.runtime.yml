@@ -1,0 +1,31 @@
+
+flavour: python-worker-spark
+
+
+
+image_version: 1
+
+
+build:
+    # `Environment variables declaration. Uncomment the following lines for declaring variables as key-value pairs`
+    #environment_constants:
+    #    VAR : VALUE
+    pre_install:
+        install_packages:
+            # List OS packages here
+            - git
+        # `Uncomment the following lines for executing commands previous to artifact deployment`
+        #run_commands:
+            # List setup commands here
+    post_install:
+        remove_packages:
+            # List OS packages to be removed
+            - git
+        run_commands:
+            # `List post installation packages`
+            # `Uninstall pyspark and py4j. Use those included in Spark distribution`
+            - pip uninstall --yes pyspark py4j
+            # `Copy jars to SPARK_HOME`
+            - find `python -c "import sys; print(sys.prefix)"` -name "*.jar" -exec cp {} ${SPARK_HOME}/jars \;
+            # `Removed unused packages. This reduces the image size`
+            - apt-get -y autoremove

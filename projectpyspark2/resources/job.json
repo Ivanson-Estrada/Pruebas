@@ -1,0 +1,16 @@
+{
+    "jobName": "<job_name>",
+    "jobVersion": "<job_version>",
+    "runtime":{
+        "id": "pyspark"
+    },
+    "description":"<description>",
+    "configuration":{
+        "size":"<size>",
+        "params": {
+            "repoSecurity": "<artifactory|nexus>",
+            "imageUri": "<artifactory_endpoint>/datio-spark/engine/<country>/<id_bitbucket>/<repository_name>:<version>",
+            "configUrl": "https://<artifactory_endpoint>/artifactory/datio-generic-<snapshot|releases>/<country>/<id_bitbucket>/<repository_name>/<version>/params.conf"
+        }
+    }
+}
