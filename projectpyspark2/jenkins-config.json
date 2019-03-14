@@ -1,0 +1,6 @@
+{
+    "projectType" : "PYTHON",
+    "logLevel" : "DEBUG",
+    "version" : "0.1.0-SNAPSHOT",
+    "python_image_base" : "datio-spark/engine/global/test/docker-runtime-images/debian-oracle-jre-python:2.0.0"
+}

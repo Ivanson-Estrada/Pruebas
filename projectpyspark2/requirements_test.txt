@@ -1,0 +1,6 @@
+-r requirements.txt
+pytest==4.3.0
+pytest-pythonpath==0.7.3
+tox==3.7.0
+flake8==3.7.6
+coverage==4.5.2
